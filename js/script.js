@@ -48,3 +48,10 @@ for(let i = 0; i < teamArray.length; i++){
   let currentMember = teamArray[i];
   console.log(currentMember.name, currentMember.role, currentMember.image);
 }
+
+///MILESTONE 2
+let teamList = document.querySelector("ul");
+for(let i = 0; i < teamArray.length; i++){
+    let currentMember = teamArray[i];
+    teamList.innerHTML += `<li>${currentMember.name}, ${currentMember.role}, ${currentMember.image}</li>`;
+}
