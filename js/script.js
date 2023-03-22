@@ -49,9 +49,23 @@ for(let i = 0; i < teamArray.length; i++){
   console.log(currentMember.name, currentMember.role, currentMember.image);
 }
 
-///MILESTONE 2
-let teamList = document.querySelector("ul");
-for(let i = 0; i < teamArray.length; i++){
+// ///MILESTONE 2
+// let teamList = document.querySelector("ul");
+// for(let i = 0; i < teamArray.length; i++){
+//     let currentMember = teamArray[i];
+//     teamList.innerHTML += `<li>${currentMember.name}, ${currentMember.role}, ${currentMember.image}</li>`;
+// }
+
+// Bonus 1 e 2
+let rowItems = document.getElementById('container');
+ for(let i = 0; i < teamArray.length; i++){
     let currentMember = teamArray[i];
-    teamList.innerHTML += `<li>${currentMember.name}, ${currentMember.role}, ${currentMember.image}</li>`;
-}
+     rowItems.innerHTML += `
+        <div class="card">
+            <img src="img/${currentMember.image}" alt="">
+            <div class="card-body text-center">
+              <h2>${currentMember.name}</h2>
+              <p>${currentMember.role}</p>
+            </div>
+          </div>`;
+ }
